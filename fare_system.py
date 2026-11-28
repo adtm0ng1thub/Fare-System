@@ -28,6 +28,24 @@ class Vehicle(ABC):
   def describe(self):
     pass
 # ===== Jeepney class (Developer A) =====
+class Jeepney(Vehicle):
+  def __init__(self, plate_number, capacity, route):
+      super().__init__(plate_number, capacity)
+      self.__route = route
+
+  def get_route(self):
+      return self.__route
+
+  def set_route(self, route):
+      self.__route = route
+
+  def compute_fare(self, distance_km):
+      if distance_km <= 4:
+          return 13.00
+      return round(13.00 + (distance_km - 4) * 1.80, 2)
+
+  def describe(self):
+      return f"Jeepney: {self.get_plate_number()} | Route: {self.get_route()} | Seats: {self.get_capacity()}."
 
 # ===== Tricycle class (Developer B) =====
 
