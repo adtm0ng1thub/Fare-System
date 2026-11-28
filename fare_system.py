@@ -1,5 +1,5 @@
 # CS3 Pair Assessment: Fare System
-# Authors: (write your full names here)
+# Authors: (Andreas Don T. Morao)
 # Section: 9 - Potassium
 
 from abc import ABC, abstractmethod
